@@ -40,9 +40,6 @@ local function registerRecipe(ammo, material, enchantment)
     end
     description = description .. "."
 
-    local mesh = Recipes.previewMeshes[ammo.handler]
-        and Recipes.previewMeshes[ammo.handler][material.id]
-
     local recipe = {
         id = resultID,
         description = description,
@@ -52,7 +49,6 @@ local function registerRecipe(ammo, material, enchantment)
         },
         category = ammo.handler,
         resultAmount = ammo.craftCount,
-        --mesh = mesh
     }
 
     return recipe
