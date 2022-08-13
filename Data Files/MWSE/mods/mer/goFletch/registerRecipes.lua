@@ -20,7 +20,7 @@ local function registerRecipe(ammo, material, enchantment)
         })
     end
     --If Ashfall is installed, add a piechttps://youtu.be/Mhxzv2x9Aeke of wood to the material requirements
-    if require("mer.ashfall.bushcrafting") and ammo.handler == "arrows" then
+    if include("mer.ashfall.bushcrafting") and ammo.handler == "arrows" then
         table.insert(itemReqs, {
             material = "wood",
             count = 1
